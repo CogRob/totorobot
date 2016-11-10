@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+  <name>totorobot_rviz</name>
+  <version>0.0.0</version>
+  <description>The totorobot_rviz package</description>
+
+  <maintainer email="roxfoxpox@gmail.com">Ruffin White</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">https://github.com/CogRob/totorobot</url>
+  <url type="repository">https://github.com/CogRob/totorobot</url>
+  <url type="bugtracker">https://github.com/CogRob/totorobot/issues</url>
+
+  <author email="roxfoxpox@gmail.com">Ruffin White</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>joint_state_publisher</run_depend>
+  <run_depend>rviz</run_depend>
+</package>

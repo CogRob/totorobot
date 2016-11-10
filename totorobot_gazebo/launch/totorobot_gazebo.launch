@@ -1,0 +1,25 @@
+<launch>
+  <env name="ROSCONSOLE_CONFIG_FILE"
+     value="$(find totorobot_gazebo)/cfg/custom_rosconsole.conf"/>
+
+   <arg name="robot" default="fetch"/>
+   <arg name="debug" default="false"/>
+   <arg name="gui" default="true"/>
+   <arg name="headless" default="false"/>
+
+  <!-- Oh, you wanted a robot? -->
+  <include file="$(find fetch_gazebo)/launch/playground.launch">
+    <arg name="robot" value="$(arg robot)" />
+    <arg name="debug" value="$(arg debug)" />
+    <arg name="gui" value="$(arg gui)" />
+    <arg name="headless" value="$(arg headless)" />
+  </include>
+
+  <!-- Oh, you wanted a working robot? -->
+  <include file="$(find totorobot_gazebo)/launch/includes/totorobot_backend.launch.xml" />
+
+
+  <!-- Drive to the table, pick stuff up -->
+  <!-- <node name="demo" pkg="fetch_gazebo_demo" type="demo.py" output="screen" /> -->
+
+</launch>
