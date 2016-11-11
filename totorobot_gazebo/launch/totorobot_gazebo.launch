@@ -18,6 +18,8 @@
   <!-- Oh, you wanted a working robot? -->
   <include file="$(find totorobot_gazebo)/launch/includes/totorobot_backend.launch.xml" />
 
+  <!-- Oh, you wanted to teleop the robot? -->
+  <include file="$(find totorobot_teleop)/launch/totorobot_teleop.launch" />
 
   <!-- Drive to the table, pick stuff up -->
   <!-- <node name="demo" pkg="fetch_gazebo_demo" type="demo.py" output="screen" /> -->

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+  <name>totorobot_teleop</name>
+  <version>0.0.0</version>
+  <description>The totorobot_teleop package</description>
+
+  <maintainer email="roxfoxpox@gmail.com">Ruffin White</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">https://github.com/CogRob/totorobot</url>
+  <url type="repository">https://github.com/CogRob/totorobot</url>
+  <url type="bugtracker">https://github.com/CogRob/totorobot/issues</url>
+
+  <author email="roxfoxpox@gmail.com">Ruffin White</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>joy</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>joy</run_depend>
+  <run_depend>yocs_velocity_smoother</run_depend>
+</package>

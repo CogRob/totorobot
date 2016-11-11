@@ -1,0 +1,33 @@
+<launch>
+
+  <arg name="button_deadman" default="4" />
+  <arg name="head_deadman" default="5" />
+
+  <arg name="joy_device" default="/dev/input/js0" />
+
+  <!--  smooths inputs from cmd_vel_mux/input/teleop_raw to cmd_vel_mux/input/teleop -->
+  <!-- <include file="$(find totorobot_teleop)/launch/includes/velocity_smoother.launch.xml"/> -->
+
+  <node name="teleop" pkg="fetch_teleop" type="joystick_teleop" output="screen">
+    <param name="is_fetch" value="true"/>
+    <param name="base/button_deadman" value="$(arg button_deadman)"/>
+    <param name="base/axis_x" value="1"/>
+    <param name="base/axis_w" value="0"/>
+    <param name="torso/button_deadman" value="$(arg button_deadman)"/>
+    <param name="torso/button_increase" value="3"/>
+    <param name="torso/button_decrease" value="1"/>
+    <param name="gripper/button_deadman" value="$(arg button_deadman)"/>
+    <param name="gripper/button_open" value="8"/>
+    <param name="gripper/button_close" value="9"/>
+    <param name="head/button_deadman" value="$(arg head_deadman)"/>
+    <param name="head/axis_pan" value="2"/>
+    <param name="head/axis_tilt" value="5"/>
+    <!-- <remap from="cmd_vel" to="raw_cmd_vel"/> -->
+  </node>
+
+  <node name="joy" pkg="joy" type="joy_node">
+    <param name="autorepeat_rate" value="1"/>
+    <param name="dev" value="$(arg joy_device)"/>
+  </node>
+
+</launch>
