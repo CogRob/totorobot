@@ -1,0 +1,9 @@
+<launch>
+
+  <arg name="annotations_path" default="$(find totorobot)/maps/plaground/annotations.yaml" />
+
+  <node name="tour" pkg="totorobot" type="totorobot_tour" output="screen">
+    <param name="annotations_path" value="$(arg annotations_path)"/>
+  </node>
+
+</launch>

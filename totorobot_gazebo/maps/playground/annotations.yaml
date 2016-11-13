@@ -1,0 +1,22 @@
+places:
+  home:
+    caption:
+      "This is my humble abode"
+    coordinates:
+      x:0
+      y:0
+      r:0
+  desk:
+    caption:
+      "This is my little workspace"
+    coordinates:
+      x:2
+      y:3
+      r:0
+  poster:
+    caption:
+      "My favorite poster hanges here"
+    coordinates:
+      x:4
+      y:8
+      r:0
