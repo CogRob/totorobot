@@ -152,11 +152,6 @@ include_directories(
 #   scripts/my_python_script
 #   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
-# catkin_install_python(PROGRAMS scripts/totorobot_tour
-#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
-# FILE(GLOB_RECURSE script_files scripts/*.py)
-# install(PROGRAMS ${script_files}
-#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 catkin_install_python(PROGRAMS scripts/totorobot_tour
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
